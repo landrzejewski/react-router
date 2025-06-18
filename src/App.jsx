@@ -120,3 +120,51 @@ function App() {
 }
 
 export default App;
+
+/*
+// routes.tsx
+import React, { lazy, Suspense } from 'react';
+import { createBrowserRouter } from 'react-router-dom';
+
+const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
+const Layout = lazy(() => import('./components/Layout'));
+
+const loader = async () => {
+  // Example loader function
+  return { data: 'some loaded data' };
+};
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: (
+      <Suspense fallback={<div>Loading...</div>}>
+        <Layout />
+      </Suspense>
+    ),
+    children: [
+      {
+        index: true,
+        element: (
+          <Suspense fallback={<div>Loading Home...</div>}>
+            <Home />
+          </Suspense>
+        ),
+      },
+      {
+        path: 'about',
+        loader,
+        element: (
+          <Suspense fallback={<div>Loading About...</div>}>
+            <About />
+          </Suspense>
+        ),
+      },
+    ],
+  },
+]);
+
+export default router;
+
+ */
