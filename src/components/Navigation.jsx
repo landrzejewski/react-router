@@ -35,6 +35,13 @@ function Navigation() {
                         Products
                     </NavLink>
                 </li>
+                <li>
+                    <NavLink
+                        to="/dashboard"
+                        className={({isActive}) => isActive ? 'active-link' : ''}>
+                        Dashboard
+                    </NavLink>
+                </li>
             </ul>
         </nav>
     );
