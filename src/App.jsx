@@ -4,6 +4,7 @@ import Layout from "./components/Layout.jsx";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Contact from "./pages/Contact.jsx";
+import ProductDetail from "./pages/ProductDetail.jsx";
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
             <Route index element={<Home />} />
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />
+
+            <Route path="products/:productId" element={<ProductDetail/>}/>
         </Route>
     </Routes>
   )
